@@ -1,2 +1,65 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+public class ClothesWasher {
+    // Attributes
+    private String brand;
+    private int capacity; // in kilograms
+    private String mode; 
+    private boolean isOn;
+
+    // Constructor
+    public ClothesWasher(String brand, int capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+        this.mode = "Normal"; 
+        this.isOn = false; 
+    }
+
+    // Methods
+    public void turnOn() {
+        if (!isOn) {
+            isOn = true;
+            System.out.println("The washing machine is now ON.");
+        } else {
+            System.out.println("The washing machine is already ON.");
+        }
+    }
+
+    public void setMode(String mode) {
+        if (isOn) {
+            this.mode = mode;
+            System.out.println("Washing mode set to: " + mode);
+        } else {
+            System.out.println("Error: Turn on the washing machine first.");
+        }
+    }
+
+    public void startWashing() {
+        if (isOn) {
+            System.out.println("Starting the washing process...");
+            System.out.println("Washing clothes in " + mode + " mode.");
+            System.out.println("Washing complete!");
+        } else {
+            System.out.println("Error: Turn on the washing machine first.");
+        }
+    }
+
+    public void turnOff() {
+        if (isOn) {
+            isOn = false;
+            System.out.println("The washing machine is now OFF.");
+        } else {
+            System.out.println("The washing machine is already OFF.");
+        }
+    }
+
+    // Main method for testing
+    public static void main(String[] args) {
+        ClothesWasher washer = new ClothesWasher("Whirlpool", 7);
+
+        washer.turnOn();
+        washer.setMode("Delicate");
+        washer.startWashing();
+        washer.turnOff();
+    }
+}
