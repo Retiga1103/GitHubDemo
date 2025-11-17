@@ -16,9 +16,3 @@ A simple Java program that simulates the operation of a washing machine. The `Cl
   - `startWashing()`: Simulates the washing process.
   - `turnOff()`: Turns the washing machine off.
 
-## How to Run
-
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
