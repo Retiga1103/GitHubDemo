@@ -1,21 +1,19 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 public class ClothesWasher {
-    // Attributes
+
     private String brand;
-    private int capacity; // in kilograms
-    private String mode; 
+    private int capacity;
+    private String mode;
     private boolean isOn;
 
-    // Constructor
     public ClothesWasher(String brand, int capacity) {
         this.brand = brand;
         this.capacity = capacity;
-        this.mode = "Normal"; 
-        this.isOn = false; 
+        this.mode = "Normal";
+        this.isOn = false;
     }
 
-    // Methods
     public void turnOn() {
         if (!isOn) {
             isOn = true;
@@ -53,7 +51,6 @@ public class ClothesWasher {
         }
     }
 
-    // Main method for testing
     public static void main(String[] args) {
         ClothesWasher washer = new ClothesWasher("Whirlpool", 7);
 
@@ -63,3 +60,4 @@ public class ClothesWasher {
         washer.turnOff();
     }
 }
+
