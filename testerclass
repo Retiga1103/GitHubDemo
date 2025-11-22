@@ -1,0 +1,13 @@
+public class ClothesWasherTester {
+    public static void main(String[] args) {
+
+        ClothesWasher washer = new ClothesWasher("Whirlpool", 7);
+        Detergent soap = new Detergent("Liquid", 50);
+
+        washer.turnOn();
+        washer.addDetergent(soap);
+        washer.setMode("Delicate");
+        washer.startWashing();
+        washer.turnOff();
+    }
+}
